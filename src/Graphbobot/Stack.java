@@ -2,7 +2,7 @@ package Graphbobot;
 
 /**
  *
- * @author Database USD
+ * @author Amran
  */
 class Stack {
 

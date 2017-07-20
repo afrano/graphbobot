@@ -2,7 +2,7 @@ package Graphbobot;
 
 /**
  *
- * @author Database USD
+ * @author Amran
  */
 class Vertex {
 
@@ -12,4 +12,6 @@ class Vertex {
     public Vertex(char label) {
         this.label = label;
     }
+    
+    
 }

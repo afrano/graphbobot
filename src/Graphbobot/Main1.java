@@ -2,9 +2,9 @@ package Graphbobot;
 
 /**
  *
- * @author Database USD
+ * @author Amran
  */
-public class Graphbobot {
+public class Main1 {
 
     /**
      * @param args the command line arguments
@@ -44,10 +44,11 @@ public class Graphbobot {
 
         System.out.println("Node Tetangga");
         graph.tetangga();
-
-        System.out.println("Jumlah edge");
-        System.out.println("jumlah edge : " + graph.jumlahEdge());
-        System.out.println("");
+        
+        
+        
+        
+                
 
     }
 }

@@ -1,8 +1,11 @@
 package Graphbobot;
 
+import java.util.ArrayList;
+
+
 /**
  *
- * @author Database USD
+ * @author Amran
  */
 class Graph {
 
@@ -132,6 +135,34 @@ class Graph {
             }
             System.out.println("---------------------------");
         }
+    }
+
+    public Vertex[] inwardEdges(char node) {
+        int nodeIndex = indexVertex(node);
+        ArrayList<Vertex> list = new ArrayList<>(vertexList.length);
+        if (nodeIndex != -1) {
+            for (int i = 0; i < adjacencyMatrix[nodeIndex].length; i++) {
+                if (adjacencyMatrix[i][nodeIndex] > 0) {
+                    list.add(vertexList[i]);
+                    System.out.println(" Sisi Masuk "+vertexList[i].label+node);
+                }
+            }
+        }
+        return list.toArray(new Vertex[0]);
+    }
+
+    public Vertex[] outwardEdges(char node) {
+        int nodeIndex = indexVertex(node);
+        ArrayList<Vertex> list = new ArrayList<>(vertexList.length);
+        if (nodeIndex != -1) {
+            for (int i = 0; i < adjacencyMatrix[nodeIndex].length; i++) {
+                if (adjacencyMatrix[nodeIndex][i] > 0) {
+                    list.add(vertexList[i]);
+                    System.out.println("Sisi Keluar "+node+vertexList[i].label);
+                }
+            }
+        }
+        return list.toArray(new Vertex[0]);
     }
 
 }
