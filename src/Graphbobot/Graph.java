@@ -2,7 +2,6 @@ package Graphbobot;
 
 import java.util.ArrayList;
 
-
 /**
  *
  * @author Amran
@@ -144,7 +143,9 @@ class Graph {
             for (int i = 0; i < adjacencyMatrix[nodeIndex].length; i++) {
                 if (adjacencyMatrix[i][nodeIndex] > 0) {
                     list.add(vertexList[i]);
-                    System.out.println(" Sisi Masuk "+vertexList[i].label+node);
+                    System.out.println("" + vertexList[i].label + node);
+                } else {
+                    list.add(vertexList[i]);
                 }
             }
         }
@@ -158,7 +159,7 @@ class Graph {
             for (int i = 0; i < adjacencyMatrix[nodeIndex].length; i++) {
                 if (adjacencyMatrix[nodeIndex][i] > 0) {
                     list.add(vertexList[i]);
-                    System.out.println("Sisi Keluar "+node+vertexList[i].label);
+                    System.out.println("" + node + vertexList[i].label);
                 }
             }
         }

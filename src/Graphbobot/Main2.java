@@ -21,24 +21,33 @@ public class Main2 {
         graph.addEdge('A', 'B', 1);
         graph.addEdge('B', 'A', 1);
         graph.addEdge('B', 'A', 1);
+        graph.addEdge('A', 'D', 1);
+        graph.addEdge('D', 'A', 0);
         graph.addEdge('B', 'C', 1);
-        graph.addEdge('E', 'B', 1);
+        graph.addEdge('E', 'B', 0);
         graph.addEdge('C', 'B', 1);
         graph.addEdge('B', 'C', 1);
         graph.addEdge('C', 'D', 1);
         graph.addEdge('D', 'C', 1);
-        
-        System.out.println("4. Sisi Masuk");
-        System.out.println("- Input Node A");
+        graph.addEdge('D', 'E', 1);
+        graph.addEdge('E', 'D', 0);
+        graph.addEdge('E', 'B', 0);
+
+        System.out.println("Input Node A");
+        System.out.println("Sisi Masuk ");
         graph.inwardEdges('A');
         System.out.println("");
-        System.out.println("- Input Node C ");
+        System.out.println("Input Node B");
+        System.out.println("Sisi Masuk ");
+        graph.inwardEdges('B');
+        System.out.println("");
+        System.out.println("Input Node C");
+        System.out.println("Sisi Masuk ");
         graph.inwardEdges('C');
         System.out.println("");
-        
-        System.out.println("5. Sisi Keluar");
-        System.out.println("- Input Node A ");
-        graph.outwardEdges('A');
-
+        System.out.println("Input Node D");
+        System.out.println("Sisi Masuk ");
+        graph.inwardEdges('D');
+        System.out.println("");
     }
 }
